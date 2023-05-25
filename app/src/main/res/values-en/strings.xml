@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lets Split</string>
+    <string name="vamos_rachar">Lets Split!</string>
+    <string name="valor">Enter the value here:</string>
+    <string name="n_pessoas">Enter the number of people here:</string>
+    <string name="valor_n">Enter the value and the number of people above</string>
+    <string name="compartilhar">SHARE</string>
+    <string name="tts">TEXT-TO-SPEECH</string>
+</resources>

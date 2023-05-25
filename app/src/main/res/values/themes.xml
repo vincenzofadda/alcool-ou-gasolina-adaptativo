@@ -2,8 +2,9 @@
 <resources>
     <style name="Theme.VamosRachar" parent="android:Theme.Material.Light">
         <item name="android:colorPrimary">#633FFF</item>
-        <item name="android:textColorPrimary">#FFFFFF</item>
-        <item name="android:textColorPrimaryInverse">#FFFFFF</item>
+        <item name="android:textColorPrimary">#C3C3C3</item>
+        <item name="android:textColorPrimaryInverse">#C3C3C3</item>
+
         <item name="android:textStyle">bold</item>
     </style>
 </resources>

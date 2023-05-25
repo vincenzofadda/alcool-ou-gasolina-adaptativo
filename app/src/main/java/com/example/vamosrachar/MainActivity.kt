@@ -33,39 +33,66 @@ class MainActivity : ComponentActivity() {
         qtdPessoas.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
+
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             }
+
             override fun afterTextChanged(s: Editable?) {
                 val dDinheiro = dinheiro.text.toString().toDoubleOrNull()
                 val dQtdPessoas = qtdPessoas.text.toString().toIntOrNull()
+                val language = Locale.getDefault().language
 
                 if (dQtdPessoas != null && dQtdPessoas != 0 && dDinheiro != null) {
                     valorPorPessoa = dDinheiro / dQtdPessoas
-                    resultado.text = "Valor por pessoa: R$ ${"%.2f".format(valorPorPessoa)}"
+
+                    resultado.text = if (language == "pt") {
+                        "Valor por pessoa: R$ ${"%.2f".format(valorPorPessoa)}"
+                    } else {
+                        "Value per person: $${"%.2f".format(valorPorPessoa)}"
+                    }
                 } else {
-                    resultado.text = "Informe o valor a ser dividido."
+
+                    resultado.text = if (language == "pt") {
+                        "Informe o valor a ser dividido."
+                    } else {
+                        "Enter the value to be divided."
+                    }
                 }
             }
         })
+
 
         dinheiro.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
+
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             }
+
             override fun afterTextChanged(s: Editable?) {
                 val dDinheiro = dinheiro.text.toString().toDoubleOrNull()
                 val dQtdPessoas = qtdPessoas.text.toString().toIntOrNull()
+                val language = Locale.getDefault().language
 
                 if (dQtdPessoas != null && dQtdPessoas != 0 && dDinheiro != null) {
                     valorPorPessoa = dDinheiro / dQtdPessoas
-                    resultado.text = "Valor por pessoa: R$ ${"%.2f".format(valorPorPessoa)}"
 
+                    resultado.text = if (language == "pt") {
+                        "Valor por pessoa: R$ ${"%.2f".format(valorPorPessoa)}"
                     } else {
-                    resultado.text = "Informe a quantidade de pessoas."
+                        "Value per person: $${"%.2f".format(valorPorPessoa)}"
+                    }
+                } else {
+
+                    resultado.text = if (language == "pt") {
+                        "Informe a quantidade de pessoas."
+                    } else {
+                        "Enter the number of people."
+                    }
                 }
             }
         })
+
 
         textToSpeech = TextToSpeech(this) {
             textToSpeech.setLanguage(Locale("pt", "BR")

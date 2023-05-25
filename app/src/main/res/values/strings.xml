@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">VamosRachar</string>
+    <string name="vamos_rachar">Vamos Rachar!</string>
+    <string name="valor">Digite o valor aqui:</string>
+    <string name="n_pessoas">Digite o nº de pessoas aqui:</string>
+    <string name="valor_n">Digite acima o valor e o nº de pessoas</string>
+    <string name="compartilhar">COMPARTILHAR</string>
+    <string name="tts">TEXT-TO-SPEECH</string>
 </resources>

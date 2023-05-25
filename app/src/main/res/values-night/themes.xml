@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.VamosRachar" parent="Theme.AppCompat">
+        <item name="android:windowBackground">#232323</item>
+        <item name="android:textColorPrimary">#C3C3C3</item>
+        <item name="android:textColorSecondary">#C3C3C3</item>
+    </style>
+</resources>
